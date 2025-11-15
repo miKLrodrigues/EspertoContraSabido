@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EspertoContraSabido", "EspertoContraSabido.csproj", "{9DF3F72F-E81A-B5CF-9C10-11ADC6E25102}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9DF3F72F-E81A-B5CF-9C10-11ADC6E25102}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DF3F72F-E81A-B5CF-9C10-11ADC6E25102}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DF3F72F-E81A-B5CF-9C10-11ADC6E25102}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DF3F72F-E81A-B5CF-9C10-11ADC6E25102}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3182D13A-A277-4EB8-98C9-2E873640531C}
+	EndGlobalSection
+EndGlobal
