@@ -1,54 +1,13 @@
-﻿/*
-int parteFox, partePicaPau;
+﻿Console.WriteLine("--- Esperto Contra Sabido ---\n");
 
-conta o numero normal
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
+int totalAlimentos = ObterTotalAlimentos();
 
-conta o numero de forma extensa
+if (totalAlimentos <= 0) return;
 
-1
-1 2
-1 2 3
-1 2 3 4
+Console.WriteLine();
 
-
-
-Console.WriteLine("--- Esperto Contra Sabido ---\n");
-
-Console.WriteLine("Quantos alimentos serão distribuídos? ");
-
-
-
-Console.WriteLine($"Pica-pau recebeu {partePicaPau} alimento(s).");
-Console.WriteLine($"Fox recebeu {parteFox} alimento(s).");
-
-*/
-
-
-
-Console.WriteLine("--- Esperto Contra Sabido ---\n");
-
-        int totalAlimentos = ObterTotalAlimentos();
-
-        if (totalAlimentos <= 0)
-        {
-            return;
-        }
-
-        Console.WriteLine();
-
-        DistribuirAlimentos(totalAlimentos);
+DistribuirAlimentos(totalAlimentos);
     
-
     static int ObterTotalAlimentos()
     {
         Console.Write("Quantos alimentos serão distribuídos? ");
@@ -59,12 +18,11 @@ Console.WriteLine("--- Esperto Contra Sabido ---\n");
         return 0;
     }
 
-    
     static void DistribuirAlimentos(int totalInicial)
     {
         int restantes = totalInicial;
         int PicaPauAlimentos = 0;
-        int FoxAlimentos = 0;
+        int FinkFoxAlimentos = 0;
         int contadorRodada = 0;
 
         while (restantes > 0)
@@ -78,45 +36,42 @@ Console.WriteLine("--- Esperto Contra Sabido ---\n");
                 Console.Write($"{contadorRodada} para você. ");
             }
 
-            int distribuidosFox = DistribuirParaFox(ref restantes, ref FoxAlimentos, contadorRodada);
+            int distribuidosFinkFox = DistribuirParaFinkFox(ref restantes, ref FinkFoxAlimentos, contadorRodada);
 
-            if (distribuidosFox > 0)
+            if (distribuidosFinkFox > 0)
             {
+                Console.Write($" ");
                 Console.WriteLine("para mim.");
-            }
-            else
-            {
-                Console.WriteLine();
             }
         }
 
-        ExibirResultadoFinal(PicaPauAlimentos, FoxAlimentos);
+        ExibirResultadoFinal(PicaPauAlimentos, FinkFoxAlimentos);
     }
 
-    static int DistribuirParaFox(ref int restantes, ref int FoxAlimentos, int limite)
+    static int DistribuirParaFinkFox(ref int restantes, ref int FinkFoxAlimentos, int limite)
     {
-        int contadorFox = 0;
+        int contadorFinkFox = 0;
         for (int i = 0; i < limite && restantes > 0; i++)
         {
-            contadorFox++;
-            FoxAlimentos++;
+            contadorFinkFox++;
+            FinkFoxAlimentos++;
             restantes--;
 
-            Console.Write(contadorFox);
+            Console.Write(contadorFinkFox);
 
             if (i < limite - 1 && restantes > 0)
             {
                 Console.Write(", ");
             }
         }
-        return contadorFox;
+        return contadorFinkFox;
     }
 
-    static void ExibirResultadoFinal(int PicaPau, int Fox)
+    static void ExibirResultadoFinal(int PicaPau, int FinkFox)
     {
         Console.WriteLine();
         Console.WriteLine($"Pica-pau recebeu {PicaPau} alimento(s).");
-        Console.WriteLine($"Fox recebeu {Fox} alimento(s).");
+        Console.WriteLine($"Fink Fox recebeu {FinkFox} alimento(s).");
     }
 
 
